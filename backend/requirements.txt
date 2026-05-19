@@ -1,0 +1,10 @@
+# Web framework and MCP
+fastmcp>=0.6.0
+uvicorn>=0.32.1
+starlette>=0.41.3
+
+# HTTP client for the Wolfram Alpha LLM API
+httpx>=0.27
+
+# Environment
+python-dotenv>=1.0.0

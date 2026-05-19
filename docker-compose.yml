@@ -1,0 +1,16 @@
+services:
+  mcp-wolfram:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mcp-wolfram
+    environment:
+      - PORT=8019
+      - TZ=UTC
+      - MCP_NAME=wolfram
+    ports:
+      # Bind to localhost only — this server is local-only, not exposed.
+      - "127.0.0.1:8019:8019"
+    volumes:
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
